@@ -9,3 +9,5 @@ export 'package:poke_radar/core/services/di.dart';
 export 'package:poke_radar/core/services/service_locator/service_locator.dart';
 export 'package:poke_radar/core/utils/env_loader/env_loader.dart';
 export 'package:poke_radar/core/config/constants/paths.dart';
+export 'package:poke_radar/core/config/router/app_router.dart';
+export 'package:poke_radar/core/config/intl/l10n.dart';

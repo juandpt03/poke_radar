@@ -27,6 +27,11 @@ class LanguageObserverState extends ConsumerState<LanguageObserver>
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      ref
+          .read(languageProvider.notifier)
+          .updateLocale(WidgetsBinding.instance.platformDispatcher.locale);
+    });
   }
 
   @override

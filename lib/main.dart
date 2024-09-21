@@ -1,8 +1,8 @@
-import 'package:poke_radar/core/config/router/app_router.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:poke_radar/core/core.dart';
-import 'package:poke_radar/features/shared/presentation/providers/observers/logger_observer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:poke_radar/features/shared/shared.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,7 +29,16 @@ class MainApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final sl = ServiceLocator();
     final router = ref.watch(routerProvider);
+    final language = ref.watch(languageProvider);
     return MaterialApp.router(
+      localizationsDelegates: const [
+        S.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: S.delegate.supportedLocales,
+      locale: language,
       themeMode: ThemeMode.system,
       theme: sl.get<AppTheme>().lightTheme,
       darkTheme: sl.get<AppTheme>().darkTheme,
