@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:poke_radar/core/core.dart';
+
+import 'package:poke_radar/features/home/presentation/providers/providers.dart';
+import 'package:poke_radar/features/home/presentation/screens/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   static const routeName = '/home';
@@ -26,7 +30,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             _Title(),
             _SearchBar(),
-            _PokemonList(),
+            _PokemonGrid(),
           ],
         ),
       ),
@@ -34,39 +38,18 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-class _PokemonList extends StatelessWidget {
-  const _PokemonList();
+class _PokemonGrid extends ConsumerWidget {
+  const _PokemonGrid();
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final pokemons = ref.watch(pokemonsProvider);
+
     return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.only(top: 32, left: 18, right: 18),
-        child: GridView.builder(
-          physics: const BouncingScrollPhysics(),
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            childAspectRatio: 1,
-            crossAxisSpacing: 8,
-            mainAxisSpacing: 9,
-          ),
-          itemCount: 10,
-          itemBuilder: (context, index) {
-            return const _PokemonCard();
-          },
-        ),
-      ),
-    );
-  }
-}
-
-class _PokemonCard extends StatelessWidget {
-  const _PokemonCard();
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
+      child: pokemons.map(
+        loading: (_) => const LoadingPokemonGrid(),
+        success: (state) => SuccessPokemonGrid(state: state),
+        error: (state) => ErrorPokemonGrid(error: state.error),
       ),
     );
   }

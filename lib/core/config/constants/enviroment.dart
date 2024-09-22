@@ -9,5 +9,5 @@ class Environment {
 
   factory Environment() => _instance;
 
-  final baseUrl = _envLoader.get('BASE_URL');
+  final String baseUrl = _envLoader.get('baseUrl') ?? '';
 }

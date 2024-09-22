@@ -53,11 +53,11 @@ class AppTheme {
   }
 
   AppTheme copyWith({
-    Color? primaryColor,
+    Color? primaryLight,
     Color? primaryDark,
   }) =>
       AppTheme(
-        primaryLight: primaryColor ?? this.primaryLight,
+        primaryLight: primaryLight ?? this.primaryLight,
         primaryDark: primaryDark ?? this.primaryDark,
       );
 }

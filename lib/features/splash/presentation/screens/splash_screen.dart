@@ -43,12 +43,16 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return Scaffold(
       body: Container(
         height: double.infinity,
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [colors.surface, colors.surfaceContainerHigh],
+            colors: [
+              colors.surface,
+              isDark ? colors.surface : colors.surfaceContainerHighest
+            ],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
