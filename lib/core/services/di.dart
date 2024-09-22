@@ -14,5 +14,6 @@ class DI {
     serviceLocator.register(EnvLoader());
     serviceLocator.register(AppTheme());
     serviceLocator.register(TransitionManager());
+    serviceLocator.register(ImageManager());
   }
 }

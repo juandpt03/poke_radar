@@ -2,23 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
-  final Color primaryColor;
+  final Color primaryLight;
   final Color primaryDark;
 
   AppTheme({
-    this.primaryColor = const Color(0xFF3366FF),
-    this.primaryDark = const Color(0xFF000000),
+    this.primaryLight = const Color(0xFF668CFF),
+    this.primaryDark = const Color(0xFF0033CC),
   });
 
   ThemeData _buildTheme(ColorScheme colorScheme) {
     return ThemeData(
+      actionIconTheme: ActionIconThemeData(
+        drawerButtonIconBuilder: (context) =>
+            Icon(size: 40, Icons.menu, color: colorScheme.onSurface),
+      ),
+      scaffoldBackgroundColor: colorScheme.surface,
       colorScheme: colorScheme,
       appBarTheme: AppBarTheme(
-        backgroundColor: colorScheme.primary,
+        backgroundColor: colorScheme.surface,
         foregroundColor: colorScheme.onPrimary,
       ),
-      fontFamily: GoogleFonts.mulish().fontFamily,
-      textTheme: GoogleFonts.mulishTextTheme().apply(
+      fontFamily: GoogleFonts.poppins().fontFamily,
+      textTheme: GoogleFonts.poppinsTextTheme().apply(
         bodyColor: colorScheme.onSurface,
         displayColor: colorScheme.onSurface,
       ),
@@ -27,9 +32,11 @@ class AppTheme {
 
   ThemeData get lightTheme {
     final ColorScheme colorScheme = ColorScheme.fromSeed(
-      primary: primaryColor,
-      seedColor: primaryColor,
+      primary: primaryLight,
+      seedColor: primaryLight,
       brightness: Brightness.light,
+      onSurface: Colors.black,
+      surface: Colors.white,
     );
     return _buildTheme(colorScheme);
   }
@@ -39,6 +46,8 @@ class AppTheme {
       primary: primaryDark,
       seedColor: primaryDark,
       brightness: Brightness.dark,
+      onSurface: Colors.white,
+      surface: Colors.black,
     );
     return _buildTheme(colorScheme);
   }
@@ -48,7 +57,7 @@ class AppTheme {
     Color? primaryDark,
   }) =>
       AppTheme(
-        primaryColor: primaryColor ?? this.primaryColor,
+        primaryLight: primaryColor ?? this.primaryLight,
         primaryDark: primaryDark ?? this.primaryDark,
       );
 }
@@ -56,7 +65,6 @@ class AppTheme {
 extension CustomColorScheme on ColorScheme {
   Color get primaryLightest => const Color(0xFFE6F0FF);
   Color get primaryLighter => const Color(0xFF99B3FF);
-  Color get primaryLight => const Color(0xFF668CFF);
   Color get primaryDarker => const Color(0xFF002699);
   Color get primaryDarkest => const Color(0xFF001A66);
 }

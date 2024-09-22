@@ -48,10 +48,7 @@ class _SplashScreenState extends State<SplashScreen>
         height: double.infinity,
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [
-              colors.surfaceContainerLowest,
-              colors.surfaceContainerHighest,
-            ],
+            colors: [colors.surface, colors.surfaceContainerHigh],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),

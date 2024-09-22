@@ -3,7 +3,7 @@ import 'package:poke_radar/core/utils/env_loader/env_loader.dart';
 
 class Environment {
   static final Environment _instance = Environment._internal();
-  static final EnvLoader _envLoader = ServiceLocator().get<EnvLoader>();
+  static final _envLoader = ServiceLocator().get<EnvLoader>();
 
   Environment._internal();
 

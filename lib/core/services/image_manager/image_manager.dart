@@ -1,6 +1,7 @@
 import 'package:poke_radar/core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:poke_radar/features/shared/shared.dart';
 
 class ImageManager {
   static final ImageManager _instance = ImageManager._internal();
@@ -9,7 +10,8 @@ class ImageManager {
 
   factory ImageManager() => _instance;
 
-  final String vault = '$baseImagePath/vault.svg';
+  final String avatar = '$baseImagePath/avatar.png';
+  final String searchIcon = '$baseImagePath/search.svg';
 
   Widget getImage(String path,
       {BoxFit fit = BoxFit.cover, double? width, double? height}) {
@@ -25,15 +27,21 @@ class ImageManager {
     );
   }
 
-  Widget getSvgImage(String path,
-      {BoxFit fit = BoxFit.cover, double? width, double? height}) {
+  Widget getSvgImage(
+    String path, {
+    BoxFit fit = BoxFit.cover,
+    double? width,
+    double? height,
+    Color? color,
+  }) {
     return SvgPicture.asset(
       path,
       fit: fit,
       width: width,
       height: height,
-      placeholderBuilder: (BuildContext context) =>
-          const Center(child: CircularProgressIndicator()),
+      colorFilter:
+          color == null ? null : ColorFilter.mode(color, BlendMode.srcIn),
+      placeholderBuilder: (BuildContext context) => const CustomLoading(),
     );
   }
 }
