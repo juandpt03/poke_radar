@@ -19,14 +19,17 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       drawer: const CustomDrawer(),
-      body: const SizedBox(
+      body: SizedBox(
         width: double.infinity,
-        child: Column(
-          children: [
-            _Title(),
-            _SearchBar(),
-            _PokemonGrid(),
-          ],
+        child: GestureDetector(
+          onTap: () => FocusScope.of(context).unfocus(),
+          child: const Column(
+            children: [
+              _Title(),
+              _SearchBar(),
+              _PokemonGrid(),
+            ],
+          ),
         ),
       ),
     );
