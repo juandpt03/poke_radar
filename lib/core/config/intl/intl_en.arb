@@ -10,5 +10,11 @@
   "defensa": "Defense",
   "ataqueEspecial": "Sp Attack",
   "defensaEspecial": "Sp Defense",
-  "velocidad": "Speed"
+  "velocidad": "Speed",
+  "configuraciones": "Settings",
+  "cambiarIdioma": "Change Language",
+  "ingls": "English",
+  "espaol": "Spanish",
+  "idioma": "Language",
+  "modoOscuro": "Dark Mode"
 }

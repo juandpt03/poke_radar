@@ -29,6 +29,7 @@ class MainApp extends ConsumerWidget {
     final sl = ServiceLocator();
     final router = ref.watch(routerProvider);
     final language = ref.watch(languageProvider);
+    final theme = ref.watch(themeProvider);
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       localizationsDelegates: const [
@@ -39,7 +40,7 @@ class MainApp extends ConsumerWidget {
       ],
       supportedLocales: S.delegate.supportedLocales,
       locale: language,
-      themeMode: ThemeMode.dark,
+      themeMode: theme,
       theme: sl.get<AppTheme>().lightTheme,
       darkTheme: sl.get<AppTheme>().darkTheme,
       routerConfig: router,

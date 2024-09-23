@@ -26,11 +26,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "ataque": MessageLookupByLibrary.simpleMessage("Ataque"),
         "ataqueEspecial": MessageLookupByLibrary.simpleMessage("Ataque Esp"),
         "buscar": MessageLookupByLibrary.simpleMessage("Buscar"),
+        "cambiarIdioma": MessageLookupByLibrary.simpleMessage("Cambiar Idioma"),
+        "configuraciones":
+            MessageLookupByLibrary.simpleMessage("Configuraciones"),
         "defensa": MessageLookupByLibrary.simpleMessage("Defensa"),
         "defensaEspecial": MessageLookupByLibrary.simpleMessage("Defensa Esp"),
         "encuentraTuPokemon":
             MessageLookupByLibrary.simpleMessage("Encuentra Tu Pokemon"),
+        "espaol": MessageLookupByLibrary.simpleMessage("Español"),
         "estadsticas": MessageLookupByLibrary.simpleMessage("Estadísticas"),
+        "idioma": MessageLookupByLibrary.simpleMessage("Idioma"),
+        "ingls": MessageLookupByLibrary.simpleMessage("Inglés"),
+        "modoOscuro": MessageLookupByLibrary.simpleMessage("Modo oscuro"),
         "movimentos": MessageLookupByLibrary.simpleMessage("Movimentos"),
         "peso": MessageLookupByLibrary.simpleMessage("Peso"),
         "velocidad": MessageLookupByLibrary.simpleMessage("Velocidad"),

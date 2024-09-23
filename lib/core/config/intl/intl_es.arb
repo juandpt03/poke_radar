@@ -10,5 +10,11 @@
   "defensa": "Defensa",
   "ataqueEspecial": "Ataque Esp",
   "defensaEspecial": "Defensa Esp",
-  "velocidad": "Velocidad"
+  "velocidad": "Velocidad",
+  "configuraciones": "Configuraciones",
+  "cambiarIdioma": "Cambiar Idioma",
+  "ingls": "Inglés",
+  "espaol": "Español",
+  "idioma": "Idioma",
+  "modoOscuro": "Modo oscuro"
 }

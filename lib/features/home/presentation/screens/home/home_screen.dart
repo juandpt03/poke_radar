@@ -4,6 +4,7 @@ import 'package:poke_radar/core/core.dart';
 
 import 'package:poke_radar/features/home/presentation/providers/providers.dart';
 import 'package:poke_radar/features/home/presentation/screens/home/widgets/widgets.dart';
+import 'package:poke_radar/features/shared/shared.dart';
 
 class HomeScreen extends StatelessWidget {
   static const routeName = '/home';
@@ -23,7 +24,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      drawer: const Drawer(),
+      drawer: const CustomDrawer(),
       body: const SizedBox(
         width: double.infinity,
         child: Column(

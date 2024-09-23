@@ -35,6 +35,10 @@ class AppTheme {
         bodyColor: colorScheme.onSurface,
         displayColor: colorScheme.onSurface,
       ),
+      drawerTheme: DrawerThemeData(
+        backgroundColor: colorScheme.surface,
+        elevation: 0,
+      ),
     );
   }
 
