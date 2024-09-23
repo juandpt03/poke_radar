@@ -16,5 +16,14 @@
   "ingls": "English",
   "espaol": "Spanish",
   "idioma": "Language",
-  "modoOscuro": "Dark Mode"
+  "modoOscuro": "Dark Mode",
+  "ups": "¡Ups!",
+  "errorDeRedPorFavorRevisaTuConexin": "Error de red, por favor revisa tu conexión",
+  "recursoNoEncontrado": "Recurso no encontrado",
+  "problemaConElServidorPorFavorIntentaMsTarde": "Problema con el servidor, por favor intenta más tarde",
+  "accesoNoAutorizadoPorFavorIniciaSesin": "Acceso no autorizado, por favor inicia sesión",
+  "solicitudIncorrectaPorFavorIntentaDeNuevo": "Solicitud incorrecta, por favor intenta de nuevo",
+  "algoSaliMalPorFavorIntentaDeNuevo": "Algo salió mal, por favor intenta de nuevo",
+  "accesoProhibido": "Acceso prohibido",
+  "reintentar": "Reintentar"
 }

@@ -9,3 +9,4 @@ export 'package:poke_radar/features/shared/presentation/widgets/loadings/custom_
 export 'package:poke_radar/features/shared/presentation/widgets/background/custom_background.dart';
 export 'package:poke_radar/features/shared/presentation/widgets/animations/custom_animations.dart';
 export 'package:poke_radar/features/shared/presentation/widgets/drawer/custom_drawer.dart';
+export 'package:poke_radar/features/shared/presentation/widgets/errors/custom_error_widget.dart';

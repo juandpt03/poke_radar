@@ -229,6 +229,96 @@ class S {
       args: [],
     );
   }
+
+  /// `¡Ups!`
+  String get ups {
+    return Intl.message(
+      '¡Ups!',
+      name: 'ups',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error de red, por favor revisa tu conexión`
+  String get errorDeRedPorFavorRevisaTuConexin {
+    return Intl.message(
+      'Error de red, por favor revisa tu conexión',
+      name: 'errorDeRedPorFavorRevisaTuConexin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Recurso no encontrado`
+  String get recursoNoEncontrado {
+    return Intl.message(
+      'Recurso no encontrado',
+      name: 'recursoNoEncontrado',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Problema con el servidor, por favor intenta más tarde`
+  String get problemaConElServidorPorFavorIntentaMsTarde {
+    return Intl.message(
+      'Problema con el servidor, por favor intenta más tarde',
+      name: 'problemaConElServidorPorFavorIntentaMsTarde',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Acceso no autorizado, por favor inicia sesión`
+  String get accesoNoAutorizadoPorFavorIniciaSesin {
+    return Intl.message(
+      'Acceso no autorizado, por favor inicia sesión',
+      name: 'accesoNoAutorizadoPorFavorIniciaSesin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Solicitud incorrecta, por favor intenta de nuevo`
+  String get solicitudIncorrectaPorFavorIntentaDeNuevo {
+    return Intl.message(
+      'Solicitud incorrecta, por favor intenta de nuevo',
+      name: 'solicitudIncorrectaPorFavorIntentaDeNuevo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Algo salió mal, por favor intenta de nuevo`
+  String get algoSaliMalPorFavorIntentaDeNuevo {
+    return Intl.message(
+      'Algo salió mal, por favor intenta de nuevo',
+      name: 'algoSaliMalPorFavorIntentaDeNuevo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Acceso prohibido`
+  String get accesoProhibido {
+    return Intl.message(
+      'Acceso prohibido',
+      name: 'accesoProhibido',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reintentar`
+  String get reintentar {
+    return Intl.message(
+      'Reintentar',
+      name: 'reintentar',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

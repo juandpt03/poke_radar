@@ -22,6 +22,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "accesoNoAutorizadoPorFavorIniciaSesin":
+            MessageLookupByLibrary.simpleMessage(
+                "Acceso no autorizado, por favor inicia sesión"),
+        "accesoProhibido":
+            MessageLookupByLibrary.simpleMessage("Acceso prohibido"),
+        "algoSaliMalPorFavorIntentaDeNuevo":
+            MessageLookupByLibrary.simpleMessage(
+                "Algo salió mal, por favor intenta de nuevo"),
         "altura": MessageLookupByLibrary.simpleMessage("Height"),
         "ataque": MessageLookupByLibrary.simpleMessage("Attack"),
         "ataqueEspecial": MessageLookupByLibrary.simpleMessage("Sp Attack"),
@@ -33,6 +41,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "defensaEspecial": MessageLookupByLibrary.simpleMessage("Sp Defense"),
         "encuentraTuPokemon":
             MessageLookupByLibrary.simpleMessage("Find Your Pokemon"),
+        "errorDeRedPorFavorRevisaTuConexin":
+            MessageLookupByLibrary.simpleMessage(
+                "Error de red, por favor revisa tu conexión"),
         "espaol": MessageLookupByLibrary.simpleMessage("Spanish"),
         "estadsticas": MessageLookupByLibrary.simpleMessage("Statistics"),
         "idioma": MessageLookupByLibrary.simpleMessage("Language"),
@@ -40,6 +51,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "modoOscuro": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "movimentos": MessageLookupByLibrary.simpleMessage("Moves"),
         "peso": MessageLookupByLibrary.simpleMessage("Weight"),
+        "problemaConElServidorPorFavorIntentaMsTarde":
+            MessageLookupByLibrary.simpleMessage(
+                "Problema con el servidor, por favor intenta más tarde"),
+        "recursoNoEncontrado":
+            MessageLookupByLibrary.simpleMessage("Recurso no encontrado"),
+        "reintentar": MessageLookupByLibrary.simpleMessage("Reintentar"),
+        "solicitudIncorrectaPorFavorIntentaDeNuevo":
+            MessageLookupByLibrary.simpleMessage(
+                "Solicitud incorrecta, por favor intenta de nuevo"),
+        "ups": MessageLookupByLibrary.simpleMessage("¡Ups!"),
         "velocidad": MessageLookupByLibrary.simpleMessage("Speed"),
         "vida": MessageLookupByLibrary.simpleMessage("Hp")
       };

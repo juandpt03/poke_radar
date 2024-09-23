@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:poke_radar/core/core.dart';
 import 'package:poke_radar/features/home/presentation/providers/providers.dart';
 import 'package:poke_radar/features/home/presentation/screens/pokemon/widgets/widgets.dart';
@@ -34,8 +35,9 @@ class _PokemonScreenState extends ConsumerState<PokemonScreen> {
         success: (state) => SuccessPokemonInfo(
           pokemon: state.pokemon!,
         ),
-        error: (state) => Center(
-          child: Text(state.error.toString()),
+        error: (state) => CustomErrorWidget(
+          error: state.error,
+          onRetry: () => context.pop(),
         ),
       ),
     );
