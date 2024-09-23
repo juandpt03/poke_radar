@@ -23,6 +23,7 @@ dependencies:
 
 dev_dependencies:
   custom_lint: ^0.6.4
+  flutter_launcher_icons: ^0.13.1
   flutter_lints: ^4.0.0
   flutter_test:
     sdk: flutter
@@ -34,9 +35,18 @@ flutter:
     - .env
     - assets/animations/
     - assets/images/
+    - assets/icon/
+
 flutter_intl:
   enabled: true
   class_name: S
   main_locale: en
   arb_dir: lib/core/config/intl
   output_dir: lib/core/config/intl
+  flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/icon.png"
+  adaptive_icon_foreground: "assets/icon/icon_round.png"
+  adaptive_icon_background: "assets/icon/icon_background.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
