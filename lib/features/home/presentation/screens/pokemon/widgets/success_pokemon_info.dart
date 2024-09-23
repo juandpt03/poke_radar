@@ -37,11 +37,14 @@ class SuccessPokemonInfo extends StatelessWidget {
                   stops: const [0.1, 0.5],
                 ),
               ),
-              child: AspectRatio(
-                aspectRatio: 1.3,
-                child: CachedNetworkImage(
-                  fit: BoxFit.cover,
-                  imageUrl: pokemon.imageUrl,
+              child: Hero(
+                tag: pokemon.id,
+                child: AspectRatio(
+                  aspectRatio: 1.3,
+                  child: CachedNetworkImage(
+                    fit: BoxFit.cover,
+                    imageUrl: pokemon.imageUrl,
+                  ),
                 ),
               ),
             ),

@@ -106,8 +106,11 @@ class _PokemonCard extends ConsumerWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
-          CachedNetworkImage(
-            imageUrl: pokemon.imageUrl,
+          Hero(
+            tag: pokemon.id,
+            child: CachedNetworkImage(
+              imageUrl: pokemon.imageUrl,
+            ),
           ),
           InkWell(
             borderRadius: BorderRadius.circular(16),

@@ -75,7 +75,6 @@ class _LanguageSelector extends ConsumerWidget {
     final currentLanguage = ref.watch(languageProvider);
     final textStyle = Theme.of(context).textTheme.titleMedium?.copyWith(
           fontWeight: FontWeight.bold,
-          color: colors.secondary,
         );
 
     final isEnglishSelected = currentLanguage.languageCode == 'en';
@@ -132,7 +131,6 @@ class _ThemeModeSwitch extends ConsumerWidget {
     final colors = Theme.of(context).colorScheme;
     final textStyle = Theme.of(context).textTheme.titleMedium?.copyWith(
           fontWeight: FontWeight.bold,
-          color: colors.secondary,
         );
 
     return Padding(
