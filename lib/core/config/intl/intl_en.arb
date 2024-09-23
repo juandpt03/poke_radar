@@ -18,12 +18,14 @@
   "idioma": "Language",
   "modoOscuro": "Dark Mode",
   "ups": "¡Ups!",
-  "errorDeRedPorFavorRevisaTuConexin": "Error de red, por favor revisa tu conexión",
-  "recursoNoEncontrado": "Recurso no encontrado",
-  "problemaConElServidorPorFavorIntentaMsTarde": "Problema con el servidor, por favor intenta más tarde",
-  "accesoNoAutorizadoPorFavorIniciaSesin": "Acceso no autorizado, por favor inicia sesión",
-  "solicitudIncorrectaPorFavorIntentaDeNuevo": "Solicitud incorrecta, por favor intenta de nuevo",
-  "algoSaliMalPorFavorIntentaDeNuevo": "Algo salió mal, por favor intenta de nuevo",
-  "accesoProhibido": "Acceso prohibido",
-  "reintentar": "Reintentar"
+  "errorDeRedPorFavorRevisaTuConexin": "Network error, please check your connection",
+  "recursoNoEncontrado": "Resource not found",
+  "problemaConElServidorPorFavorIntentaMsTarde": "Server problem, please try again later",
+  "accesoNoAutorizadoPorFavorIniciaSesin": "Unauthorized access, please log in",
+  "solicitudIncorrectaPorFavorIntentaDeNuevo": "Bad request, please try again",
+  "algoSaliMalPorFavorIntentaDeNuevo": "Something went wrong, please try again",
+  "accesoProhibido": "Access forbidden",
+  "reintentar": "Retry",
+  "cargando": "Loading...",
+  "error": "Error"
 }

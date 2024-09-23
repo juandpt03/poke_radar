@@ -12,16 +12,10 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ImageManager img = ServiceLocator().get();
     return Scaffold(
       appBar: AppBar(
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 16),
-            child: CircleAvatar(
-              backgroundImage: AssetImage(img.avatar),
-            ),
-          ),
+        actions: const [
+          _CustomAvatar(),
         ],
       ),
       drawer: const CustomDrawer(),
@@ -33,6 +27,33 @@ class HomeScreen extends StatelessWidget {
             _SearchBar(),
             _PokemonGrid(),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class _CustomAvatar extends ConsumerWidget {
+  const _CustomAvatar();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final ImageManager img = ServiceLocator().get();
+    final image = ref.watch(imageProvider);
+    return Padding(
+      padding: const EdgeInsets.only(right: 16),
+      child: GestureDetector(
+        onTap: () => ref.read(imageProvider.notifier).setImage(),
+        child: FittedBox(
+          fit: BoxFit.contain,
+          child: CircleAvatar(
+            radius: 50,
+            backgroundImage: image == null
+                ? AssetImage(img.avatar)
+                : FileImage(
+                    image,
+                  ),
+          ),
         ),
       ),
     );

@@ -240,81 +240,101 @@ class S {
     );
   }
 
-  /// `Error de red, por favor revisa tu conexión`
+  /// `Network error, please check your connection`
   String get errorDeRedPorFavorRevisaTuConexin {
     return Intl.message(
-      'Error de red, por favor revisa tu conexión',
+      'Network error, please check your connection',
       name: 'errorDeRedPorFavorRevisaTuConexin',
       desc: '',
       args: [],
     );
   }
 
-  /// `Recurso no encontrado`
+  /// `Resource not found`
   String get recursoNoEncontrado {
     return Intl.message(
-      'Recurso no encontrado',
+      'Resource not found',
       name: 'recursoNoEncontrado',
       desc: '',
       args: [],
     );
   }
 
-  /// `Problema con el servidor, por favor intenta más tarde`
+  /// `Server problem, please try again later`
   String get problemaConElServidorPorFavorIntentaMsTarde {
     return Intl.message(
-      'Problema con el servidor, por favor intenta más tarde',
+      'Server problem, please try again later',
       name: 'problemaConElServidorPorFavorIntentaMsTarde',
       desc: '',
       args: [],
     );
   }
 
-  /// `Acceso no autorizado, por favor inicia sesión`
+  /// `Unauthorized access, please log in`
   String get accesoNoAutorizadoPorFavorIniciaSesin {
     return Intl.message(
-      'Acceso no autorizado, por favor inicia sesión',
+      'Unauthorized access, please log in',
       name: 'accesoNoAutorizadoPorFavorIniciaSesin',
       desc: '',
       args: [],
     );
   }
 
-  /// `Solicitud incorrecta, por favor intenta de nuevo`
+  /// `Bad request, please try again`
   String get solicitudIncorrectaPorFavorIntentaDeNuevo {
     return Intl.message(
-      'Solicitud incorrecta, por favor intenta de nuevo',
+      'Bad request, please try again',
       name: 'solicitudIncorrectaPorFavorIntentaDeNuevo',
       desc: '',
       args: [],
     );
   }
 
-  /// `Algo salió mal, por favor intenta de nuevo`
+  /// `Something went wrong, please try again`
   String get algoSaliMalPorFavorIntentaDeNuevo {
     return Intl.message(
-      'Algo salió mal, por favor intenta de nuevo',
+      'Something went wrong, please try again',
       name: 'algoSaliMalPorFavorIntentaDeNuevo',
       desc: '',
       args: [],
     );
   }
 
-  /// `Acceso prohibido`
+  /// `Access forbidden`
   String get accesoProhibido {
     return Intl.message(
-      'Acceso prohibido',
+      'Access forbidden',
       name: 'accesoProhibido',
       desc: '',
       args: [],
     );
   }
 
-  /// `Reintentar`
+  /// `Retry`
   String get reintentar {
     return Intl.message(
-      'Reintentar',
+      'Retry',
       name: 'reintentar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Loading...`
+  String get cargando {
+    return Intl.message(
+      'Loading...',
+      name: 'cargando',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error`
+  String get error {
+    return Intl.message(
+      'Error',
+      name: 'error',
       desc: '',
       args: [],
     );

@@ -59,9 +59,9 @@ class _CustomAppbar extends ConsumerWidget implements PreferredSizeWidget {
       centerTitle: true,
       title: Text(
         pokemon.map(
-          loading: (_) => 'Cargando...',
+          loading: (_) => S.of(context).cargando,
           success: (state) => state.pokemon!.name,
-          error: (state) => 'Error',
+          error: (state) => S.of(context).error,
         ),
         style: textStyle,
       ),

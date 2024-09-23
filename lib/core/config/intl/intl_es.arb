@@ -25,5 +25,7 @@
   "solicitudIncorrectaPorFavorIntentaDeNuevo": "Solicitud incorrecta, por favor intenta de nuevo",
   "algoSaliMalPorFavorIntentaDeNuevo": "Algo salió mal, por favor intenta de nuevo",
   "accesoProhibido": "Acceso prohibido",
-  "reintentar": "Reintentar"
+  "reintentar": "Reintentar",
+  "cargando": "Cargando...",
+  "error": "Error"
 }

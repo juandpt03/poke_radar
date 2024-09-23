@@ -27,7 +27,6 @@ class _DrawerHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final img = ServiceLocator().get<ImageManager>();
     final colors = Theme.of(context).colorScheme;
     final textStyle = Theme.of(context)
         .textTheme
@@ -54,12 +53,35 @@ class _DrawerHeader extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            CircleAvatar(
-              radius: 50,
-              backgroundImage: AssetImage(img.avatar),
-            ),
+            const _CustomAvatar(),
             Text(S.of(context).configuraciones, style: textStyle),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class _CustomAvatar extends ConsumerWidget {
+  const _CustomAvatar();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final img = ServiceLocator().get<ImageManager>();
+    final image = ref.watch(imageProvider);
+
+    return GestureDetector(
+      onTap: () => ref.read(imageProvider.notifier).setImage(),
+      child: CircleAvatar(
+        radius: 50,
+        backgroundImage:
+            image == null ? AssetImage(img.avatar) : FileImage(image),
+        child: const Opacity(
+          opacity: 0.5,
+          child: Icon(
+            Icons.change_circle,
+            size: 30,
+          ),
         ),
       ),
     );

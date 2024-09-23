@@ -24,26 +24,28 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "accesoNoAutorizadoPorFavorIniciaSesin":
             MessageLookupByLibrary.simpleMessage(
-                "Acceso no autorizado, por favor inicia sesión"),
+                "Unauthorized access, please log in"),
         "accesoProhibido":
-            MessageLookupByLibrary.simpleMessage("Acceso prohibido"),
+            MessageLookupByLibrary.simpleMessage("Access forbidden"),
         "algoSaliMalPorFavorIntentaDeNuevo":
             MessageLookupByLibrary.simpleMessage(
-                "Algo salió mal, por favor intenta de nuevo"),
+                "Something went wrong, please try again"),
         "altura": MessageLookupByLibrary.simpleMessage("Height"),
         "ataque": MessageLookupByLibrary.simpleMessage("Attack"),
         "ataqueEspecial": MessageLookupByLibrary.simpleMessage("Sp Attack"),
         "buscar": MessageLookupByLibrary.simpleMessage("Search"),
         "cambiarIdioma":
             MessageLookupByLibrary.simpleMessage("Change Language"),
+        "cargando": MessageLookupByLibrary.simpleMessage("Loading..."),
         "configuraciones": MessageLookupByLibrary.simpleMessage("Settings"),
         "defensa": MessageLookupByLibrary.simpleMessage("Defense"),
         "defensaEspecial": MessageLookupByLibrary.simpleMessage("Sp Defense"),
         "encuentraTuPokemon":
             MessageLookupByLibrary.simpleMessage("Find Your Pokemon"),
+        "error": MessageLookupByLibrary.simpleMessage("Error"),
         "errorDeRedPorFavorRevisaTuConexin":
             MessageLookupByLibrary.simpleMessage(
-                "Error de red, por favor revisa tu conexión"),
+                "Network error, please check your connection"),
         "espaol": MessageLookupByLibrary.simpleMessage("Spanish"),
         "estadsticas": MessageLookupByLibrary.simpleMessage("Statistics"),
         "idioma": MessageLookupByLibrary.simpleMessage("Language"),
@@ -53,13 +55,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "peso": MessageLookupByLibrary.simpleMessage("Weight"),
         "problemaConElServidorPorFavorIntentaMsTarde":
             MessageLookupByLibrary.simpleMessage(
-                "Problema con el servidor, por favor intenta más tarde"),
+                "Server problem, please try again later"),
         "recursoNoEncontrado":
-            MessageLookupByLibrary.simpleMessage("Recurso no encontrado"),
-        "reintentar": MessageLookupByLibrary.simpleMessage("Reintentar"),
+            MessageLookupByLibrary.simpleMessage("Resource not found"),
+        "reintentar": MessageLookupByLibrary.simpleMessage("Retry"),
         "solicitudIncorrectaPorFavorIntentaDeNuevo":
             MessageLookupByLibrary.simpleMessage(
-                "Solicitud incorrecta, por favor intenta de nuevo"),
+                "Bad request, please try again"),
         "ups": MessageLookupByLibrary.simpleMessage("¡Ups!"),
         "velocidad": MessageLookupByLibrary.simpleMessage("Speed"),
         "vida": MessageLookupByLibrary.simpleMessage("Hp")

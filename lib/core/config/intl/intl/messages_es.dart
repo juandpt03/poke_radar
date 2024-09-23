@@ -35,12 +35,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "ataqueEspecial": MessageLookupByLibrary.simpleMessage("Ataque Esp"),
         "buscar": MessageLookupByLibrary.simpleMessage("Buscar"),
         "cambiarIdioma": MessageLookupByLibrary.simpleMessage("Cambiar Idioma"),
+        "cargando": MessageLookupByLibrary.simpleMessage("Cargando..."),
         "configuraciones":
             MessageLookupByLibrary.simpleMessage("Configuraciones"),
         "defensa": MessageLookupByLibrary.simpleMessage("Defensa"),
         "defensaEspecial": MessageLookupByLibrary.simpleMessage("Defensa Esp"),
         "encuentraTuPokemon":
             MessageLookupByLibrary.simpleMessage("Encuentra Tu Pokemon"),
+        "error": MessageLookupByLibrary.simpleMessage("Error"),
         "errorDeRedPorFavorRevisaTuConexin":
             MessageLookupByLibrary.simpleMessage(
                 "Error de red, por favor revisa tu conexión"),
