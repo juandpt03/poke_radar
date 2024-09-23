@@ -29,4 +29,19 @@ class PokeApiDatasource implements PokemonDatasource {
       return Either.left(failure);
     }
   }
+
+  @override
+  GetPokemonInfo getPokemonInfo({required int id}) async {
+    try {
+      final response = await client.get("$pokemonsListPath/$id");
+      if (response.statusCode == 200) {
+        final pokemon = PokemonInfoModel.fromJson(response.data).toEntity();
+        return Either.right(pokemon);
+      }
+      throw HttpRequestFailure.fromCode(response.statusCode);
+    } catch (e) {
+      final failure = HttpRequestFailure.fromException(e);
+      return Either.left(failure);
+    }
+  }
 }

@@ -5,4 +5,10 @@ class LocalDatasource implements PokemonDatasource {
   GetPokemons getPokemons({int offset = 0, int limit = 10}) {
     throw UnimplementedError();
   }
+
+  @override
+  GetPokemonInfo getPokemonInfo({required int id}) {
+    // TODO: implement getPokemonInfo
+    throw UnimplementedError();
+  }
 }

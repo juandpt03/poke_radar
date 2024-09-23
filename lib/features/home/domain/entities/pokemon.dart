@@ -4,6 +4,7 @@ class Pokemon {
   final String imageUrl;
   final PokemonInfo? info;
   final String backGroundColor;
+  final bool isFavorite;
 
   Pokemon({
     required this.id,
@@ -11,7 +12,25 @@ class Pokemon {
     required this.imageUrl,
     required this.backGroundColor,
     this.info,
+    this.isFavorite = false,
   });
+
+  Pokemon copyWith({
+    int? id,
+    String? name,
+    String? imageUrl,
+    PokemonInfo? info,
+    String? backGroundColor,
+    bool? isFavorite,
+  }) =>
+      Pokemon(
+        id: id ?? this.id,
+        name: name ?? this.name,
+        imageUrl: imageUrl ?? this.imageUrl,
+        info: info ?? this.info,
+        backGroundColor: backGroundColor ?? this.backGroundColor,
+        isFavorite: isFavorite ?? this.isFavorite,
+      );
 }
 
 class PokemonInfo {

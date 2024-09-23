@@ -1,4 +1,14 @@
 {
   "encuentraTuPokemon": "Encuentra Tu Pokemon",
-  "buscar": "Buscar"
+  "buscar": "Buscar",
+  "altura": "Altura",
+  "peso": "Peso",
+  "movimentos": "Movimentos",
+  "estadsticas": "Estadísticas",
+  "vida": "Vida",
+  "ataque": "Ataque",
+  "defensa": "Defensa",
+  "ataqueEspecial": "Ataque Esp",
+  "defensaEspecial": "Defensa Esp",
+  "velocidad": "Velocidad"
 }

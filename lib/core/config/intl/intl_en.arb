@@ -1,4 +1,14 @@
 {
   "encuentraTuPokemon": "Find Your Pokemon",
-  "buscar": "Buscar"
+  "buscar": "Search",
+  "altura": "Height",
+  "peso": "Weight",
+  "movimentos": "Moves",
+  "estadsticas": "Statistics",
+  "vida": "Hp",
+  "ataque": "Attack",
+  "defensa": "Defense",
+  "ataqueEspecial": "Sp Attack",
+  "defensaEspecial": "Sp Defense",
+  "velocidad": "Speed"
 }

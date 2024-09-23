@@ -11,3 +11,4 @@ export 'package:poke_radar/core/utils/env_loader/env_loader.dart';
 export 'package:poke_radar/core/config/constants/paths.dart';
 export 'package:poke_radar/core/config/router/app_router.dart';
 export 'package:poke_radar/core/config/intl/l10n.dart';
+export 'package:poke_radar/core/config/helpers/translator.dart';

@@ -1,13 +1,16 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:poke_radar/core/core.dart';
 import 'package:poke_radar/features/home/domain/domain.dart';
 import 'package:poke_radar/features/home/presentation/providers/providers.dart';
+import 'package:poke_radar/features/home/presentation/screens/screens.dart';
 import 'package:poke_radar/features/shared/shared.dart';
 
 class SuccessPokemonGrid extends ConsumerStatefulWidget {
-  final Success state;
+  final PokemonsSuccess state;
 
   const SuccessPokemonGrid({super.key, required this.state});
 
@@ -28,6 +31,9 @@ class _SuccessPokemonGridState extends ConsumerState<SuccessPokemonGrid> {
 
   @override
   Widget build(BuildContext context) {
+    final pokemons = widget.state.filteredPokemons.isEmpty
+        ? widget.state.pokemons
+        : widget.state.filteredPokemons;
     return Column(
       children: [
         Expanded(
@@ -42,9 +48,9 @@ class _SuccessPokemonGridState extends ConsumerState<SuccessPokemonGrid> {
                 crossAxisSpacing: 8,
                 mainAxisSpacing: 9,
               ),
-              itemCount: widget.state.pokemons.length,
+              itemCount: pokemons.length,
               itemBuilder: (context, index) {
-                final pokemon = widget.state.pokemons[index];
+                final pokemon = pokemons[index];
                 return CustomAnimation(
                   child: _PokemonCard(pokemon: pokemon),
                 );
@@ -73,19 +79,24 @@ class _SuccessPokemonGridState extends ConsumerState<SuccessPokemonGrid> {
   }
 }
 
-class _PokemonCard extends StatelessWidget {
+class _PokemonCard extends ConsumerWidget {
   final Pokemon pokemon;
   const _PokemonCard({
     required this.pokemon,
   });
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final ImageManager img = ServiceLocator().get();
     final textStyle = Theme.of(context).textTheme.bodyMedium?.copyWith(
           fontWeight: FontWeight.bold,
           color: Colors.white,
           fontSize: 20,
         );
+
+    void onTap() {
+      ref.read(pokemonsProvider.notifier).setSelectedPokemon(pokemon: pokemon);
+      context.pushNamed(PokemonScreen.routeName);
+    }
 
     return Card(
       color: Color(int.parse(pokemon.backGroundColor)),
@@ -95,13 +106,14 @@ class _PokemonCard extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
-          Positioned(
-            left: 12,
-            top: 12,
-            child: img.getSvgImage(img.outlinedHeartIcon),
+          CachedNetworkImage(
+            imageUrl: pokemon.imageUrl,
           ),
-          Image.network(pokemon.imageUrl),
-          const CustomBackground(),
+          InkWell(
+            borderRadius: BorderRadius.circular(16),
+            onTap: onTap,
+            child: const CustomBackground(),
+          ),
           Positioned(
             bottom: 12,
             left: 12,
@@ -116,11 +128,29 @@ class _PokemonCard extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                   ),
                 ),
-                const Icon(
-                  Icons.arrow_circle_right_outlined,
-                  color: Colors.white,
+                InkWell(
+                  borderRadius: BorderRadius.circular(16),
+                  onTap: onTap,
+                  child: const Icon(
+                    Icons.arrow_circle_right_outlined,
+                    color: Colors.white,
+                  ),
                 ),
               ],
+            ),
+          ),
+          Positioned(
+            left: 12,
+            top: 12,
+            child: GestureDetector(
+              onTap: () {
+                ref
+                    .read(pokemonsProvider.notifier)
+                    .toggleFavoritePokemons(id: pokemon.id);
+              },
+              child: img.getSvgImage(
+                pokemon.isFavorite ? img.fillHeartIcon : img.outlinedHeartIcon,
+              ),
             ),
           ),
         ],

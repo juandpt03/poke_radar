@@ -7,7 +7,6 @@ import 'package:poke_radar/features/shared/shared.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final di = DI();
-
   await di.setup();
   runApp(
     ProviderScope(

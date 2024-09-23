@@ -12,8 +12,8 @@ class DI {
     await EnvLoader().loadEnv('.env');
 
     serviceLocator.register(EnvLoader());
-    serviceLocator.register(AppTheme());
-    serviceLocator.register(TransitionManager());
     serviceLocator.register(ImageManager());
+    serviceLocator.register(AppTheme(img: serviceLocator.get()));
+    serviceLocator.register(TransitionManager());
   }
 }

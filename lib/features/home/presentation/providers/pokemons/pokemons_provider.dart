@@ -5,7 +5,7 @@ import 'package:poke_radar/features/home/infrastructure/datasources/poke_api_dat
 import 'package:poke_radar/features/home/infrastructure/repositories/pokemon_repository_impl.dart';
 import 'package:poke_radar/features/home/presentation/providers/providers.dart';
 
-final pokemonsProvider = StateNotifierProvider<PokemonsNotifier, PokemonState>(
+final pokemonsProvider = StateNotifierProvider<PokemonsNotifier, PokemonsState>(
   (ref) => PokemonsNotifier(
     pokemonUseCases: ref.read(getPokemonUsecaseProvider),
   ),

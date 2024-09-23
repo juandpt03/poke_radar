@@ -14,6 +14,8 @@ class ImageManager {
   final String searchIcon = '$baseImagePath/search.svg';
   final String fillHeartIcon = '$baseImagePath/fill_heart.svg';
   final String outlinedHeartIcon = '$baseImagePath/outlined_heart.svg';
+  final String arrowBackIcon = '$baseImagePath/arrow_back.svg';
+  final String statIcon = '$baseImagePath/stat.svg';
 
   Widget getImage(String path,
       {BoxFit fit = BoxFit.cover, double? width, double? height}) {

@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:poke_radar/core/core.dart';
 
 import 'package:poke_radar/features/home/presentation/providers/providers.dart';
-import 'package:poke_radar/features/home/presentation/screens/widgets/widgets.dart';
+import 'package:poke_radar/features/home/presentation/screens/home/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   static const routeName = '/home';
@@ -55,11 +55,11 @@ class _PokemonGrid extends ConsumerWidget {
   }
 }
 
-class _SearchBar extends StatelessWidget {
+class _SearchBar extends ConsumerWidget {
   const _SearchBar();
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final colors = Theme.of(context).colorScheme;
     final ImageManager img = ServiceLocator().get();
@@ -68,6 +68,9 @@ class _SearchBar extends StatelessWidget {
       child: ConstrainedBox(
         constraints: const BoxConstraints(maxHeight: 40),
         child: SearchBar(
+          onChanged: (query) {
+            ref.read(pokemonsProvider.notifier).filterPokemons(query: query);
+          },
           surfaceTintColor:
               isDark ? WidgetStatePropertyAll(colors.onErrorContainer) : null,
           hintStyle: const WidgetStatePropertyAll(TextStyle(fontSize: 20)),

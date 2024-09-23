@@ -1,5 +1,5 @@
 import 'package:poke_radar/core/core.dart';
-import 'package:poke_radar/features/home/presentation/screens/home_screen.dart';
+import 'package:poke_radar/features/home/presentation/screens/screens.dart';
 import 'package:poke_radar/features/shared/shared.dart';
 import 'package:poke_radar/features/splash/presentation/screens/splash_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -25,6 +25,14 @@ final routerProvider = Provider<GoRouter>((ref) {
           state: state,
         ),
         name: HomeScreen.routeName,
+      ),
+      GoRoute(
+        path: PokemonScreen.routeName,
+        pageBuilder: (context, state) => transition.slideTransition(
+          child: const PokemonScreen(),
+          state: state,
+        ),
+        name: PokemonScreen.routeName,
       )
     ],
   );

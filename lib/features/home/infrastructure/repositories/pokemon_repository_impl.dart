@@ -7,4 +7,8 @@ class PokemonRepositoryImpl implements PokemonRepository {
   @override
   GetPokemons getPokemons({int offset = 0, int limit = 10}) =>
       datasource.getPokemons(offset: offset, limit: limit);
+
+  @override
+  GetPokemonInfo getPokemonInfo({required int id}) =>
+      datasource.getPokemonInfo(id: id);
 }
